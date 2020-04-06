@@ -24,7 +24,7 @@ var (
 	awayFlag      = f.Bool("away", false, "away")
 	groupFlag     = f.StringP("group", "g", "", "group")
 	workspaceFlag = f.StringP("workspace", "w", "", "workspace")
-	timeoutFlag   = f.IntP("timeout", "t", "", "timeout")
+	timeoutFlag   = f.IntP("timeout", "t", 0, "timeout")
 )
 
 func main() {
