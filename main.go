@@ -24,6 +24,7 @@ var (
 	awayFlag      = f.Bool("away", false, "away")
 	groupFlag     = f.StringP("group", "g", "", "group")
 	workspaceFlag = f.StringP("workspace", "w", "", "workspace")
+	timeoutFlag   = f.IntP("timeout", "t", "", "timeout")
 )
 
 func main() {
@@ -89,7 +90,7 @@ func main() {
 			}
 		}
 
-		if err := api.SetUserCustomStatus(message, icon); err != nil {
+		if err := api.SetUserCustomStatus(message, icon, 0); err != nil {
 			log.Fatal(err)
 		}
 	}
